@@ -1,0 +1,4 @@
+heroku_env/
+static/admin/
+static/js/
+static/css/
