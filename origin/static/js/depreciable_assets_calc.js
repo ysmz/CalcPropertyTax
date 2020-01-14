@@ -246,6 +246,11 @@ $(function() {
         });
     });
 
+    document.getElementById('excel-download').addEventListener('click', function(e) {
+        console.log($('#result').tableToJSON());
+        document.download.result_json.value = JSON.stringify($('#result').tableToJSON());
+    });
+
     devalued_rates = JSON.parse(document.getElementById('devalued-rates').textContent);
 
     document.getElementById('tax-year').innerHTML = convertYearsUsToJp((new Date()).getFullYear());

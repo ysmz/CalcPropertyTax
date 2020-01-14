@@ -7,6 +7,7 @@
     <meta charset="utf-8"></meta>
     <title>償却資産仮計算</title>
     <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.tabletojson.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"></link>
     <script src="{% static 'js/depreciable_assets_calc.js' %}"></script>
@@ -19,6 +20,10 @@
             <a class="navbar-brand" href="#">
                 <strong>償却資産仮計算</strong>
             </a>
+            <form target="_blank" name="download" action="{% url 'download' %}" method="post">
+                <input type="hidden" id="result_json" name="result_json" value="">
+                <button type="submit" class="btn btn-outline-warning" id="excel-download">ダウンロード</button>
+            </form>
         </nav>
     </header>
     <div class="container">
