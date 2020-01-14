@@ -1,1 +1,1 @@
-web: gunicorn culc_property_tax.wsgi --log-file -
+web: gunicorn calc_property_tax.wsgi --log-file -

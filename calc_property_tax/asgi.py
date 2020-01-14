@@ -1,5 +1,5 @@
 """
-ASGI config for culc_property_tax project.
+ASGI config for calc_property_tax project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'culc_property_tax.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'calc_property_tax.settings')
 
 application = get_asgi_application()

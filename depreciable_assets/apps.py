@@ -1,6 +1,6 @@
 import os, csv
 from django.apps import AppConfig
-from culc_property_tax.settings import CONFIG_URL
+from calc_property_tax.settings import CONFIG_URL
 
 class DepreciableAssetsConfig(AppConfig):
     name = 'depreciable_assets'

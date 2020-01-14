@@ -27,7 +27,7 @@ function displayResult() {
 }
 
 function createResultTable(assets_name, assets_date_value, life, price, tax_year_date) {
-    var valuation = culcTaxPrice(life, price, getAssetsDate(assets_date_value), tax_year_date);
+    var valuation = calcTaxPrice(life, price, getAssetsDate(assets_date_value), tax_year_date);
 
     var items = [assets_name, convertDisplayYear(assets_date_value), life, separate(price), separate(valuation), '<input type=\"checkbox\"></input>']
 
@@ -56,7 +56,7 @@ function recalcTaxPrice(tax_year) {
 
         var assets_date = getAssetsDate(result_table.rows[i].cells[1].innerHTML.replace('.', ''));
 
-        var valuation = culcTaxPrice(Number(result_table.rows[i].cells[2].innerHTML), deleteSeparateNumber(result_table.rows[i].cells[3].innerHTML), assets_date, tax_year_date);
+        var valuation = calcTaxPrice(Number(result_table.rows[i].cells[2].innerHTML), deleteSeparateNumber(result_table.rows[i].cells[3].innerHTML), assets_date, tax_year_date);
 
         result_table.rows[i].cells[4].innerHTML = separate(valuation);
         valuation_sum += valuation;
@@ -65,7 +65,7 @@ function recalcTaxPrice(tax_year) {
     setValuationSum(valuation_sum);
 }
 
-function culcTaxPrice(life, price, assets_date, tax_year_date) {
+function calcTaxPrice(life, price, assets_date, tax_year_date) {
 
     if (assets_date.getFullYear() >= tax_year_date.getFullYear()) return 0;
 
