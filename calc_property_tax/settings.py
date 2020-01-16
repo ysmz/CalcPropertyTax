@@ -33,7 +33,7 @@ if DEBUG:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-    ALLOWED_HOSTS = [] # よくわからんけど、これも大事らしい
+    ALLOWED_HOSTS = [] 
 else:
     LOGGING = {
         'version': 1,

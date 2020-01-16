@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path('', include('depreciable_assets.urls')),
     path('admin/', admin.site.urls),
     path('depreciable_assets/', include('depreciable_assets.urls')),
 ]

@@ -197,9 +197,9 @@ function fileDownload() {
         return;
     }
 
-    fileName = fileName + ".tsv";
+    fileName = fileName + ".csv";
 
-    document.getElementById("save-tsv").download = fileName;
+    document.getElementById("save-csv").download = fileName;
 
     var content = "";
     var result_table = document.getElementById('result');
@@ -214,7 +214,7 @@ function fileDownload() {
     if (window.navigator.msSaveBlob) {
         window.navigator.msSaveBlob(blob, fileName);
     } else {
-        document.getElementById("save-tsv").href = window.URL.createObjectURL(blob);
+        document.getElementById("save-csv").href = window.URL.createObjectURL(blob);
     }
 }
 

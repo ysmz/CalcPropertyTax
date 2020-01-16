@@ -22,7 +22,7 @@
             </a>
             <form target="_blank" name="download" action="{% url 'download' %}" method="post">
                 <input type="hidden" id="result_json" name="result_json" value="">
-                <button type="submit" class="btn btn-outline-warning" id="excel-download">ダウンロード</button>
+                <button type="submit" class="btn btn-outline-warning" id="excel-download">種類別明細書ダウンロード</button>
             </form>
         </nav>
     </header>
@@ -76,7 +76,7 @@
                                 <input class="form-control" type="text" name="save-file-name" id="save-file-name" required="" placeholder="ファイル名"></input>
                             </div>
                             <div class="form-group">
-                                <a class="btn btn-outline-warning" download="" id="save-tsv" href="#" onClick="fileDownload()">保存</a>
+                                <a class="btn btn-outline-warning" download="" id="save-csv" href="#" onClick="fileDownload()">保存</a>
                             </div>
                         </div>
                     </form>
@@ -90,15 +90,14 @@
                         <label>名称</label>
                         <input class="form-control" type="text" name="assets-name" id="assets-name" required=""></input>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-sm-6">
-                            <label>取得年月</label>
-                            <input class="form-control" type="text" name="assets-date" id="assets-date" required="" placeholder="43012"></input>
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label>耐用年数</label>
-                            <input class="form-control" type="number" name="assets-life" id="assets-life" required=""></input>
-                        </div>
+                    <div class="form-group">
+                        <label>取得年月</label>
+                        <label>1:明治 2:大正 3:昭和 4:平成 5:令和 例:平成25年5月取得であれば「42505」</label>
+                        <input class="form-control" type="text" name="assets-date" id="assets-date" required="" placeholder="42505"></input>
+                    </div>
+                    <div class="form-group">
+                        <label>耐用年数</label><a class="btn btn-link" target="_blank" href="https://www.tax.metro.tokyo.lg.jp/shisan/info/taiyo_nensu.html">耐用年数についてはこちら</a>
+                        <input class="form-control" type="number" name="assets-life" id="assets-life" required=""></input>
                     </div>
                     <div class="form-group">
                         <label>取得価格</label>
